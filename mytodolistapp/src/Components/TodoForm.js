@@ -6,6 +6,11 @@ export default function TodoForm(props) {
        //Declaring the state named input
        const [input ,setInput] = useState('');  //if the user is writing something in the box then it will keep the record of that state
        
+       //if someone is typing constantly on the input that changes should be reflected or just the first letter or the first word should get updated
+       const handleChange =e =>{
+        setInput(e.target.value)
+       }
+
        const handleSubmit = (e)=>{
         //avoids page reloads
         e.preventDefault();
@@ -26,7 +31,7 @@ export default function TodoForm(props) {
 
   return (
     <form>
-        <input type="text" placeholder='Title...' value={input} name="text"/>
+        <input type="text" placeholder='Title...' onChange={handleChange} className="todo-input" value={input} name="text"/>
         <button type='submit' onClick={handleSubmit} className='todo-btn'>Add</button>
     </form>
   );
