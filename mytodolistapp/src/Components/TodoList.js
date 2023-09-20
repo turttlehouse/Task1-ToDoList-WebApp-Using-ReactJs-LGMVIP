@@ -9,6 +9,8 @@ export default function TodoList() {
     //The Data coming from the form will be added in the array
     //we will get the 3 values the mandatory value will be the task
 
+
+    //ADD A TODO LIST
     const addTask= task=>{
 
         //if there will be no task we cannot add anything
@@ -24,10 +26,41 @@ export default function TodoList() {
 
         //or you can use like this
         // const oldTask = todos; todos.push(task);
-         
-
 
     }
+
+    //REMOVE TODO FROM LIST
+
+    const removeTask = id =>{
+      let updatedTasks = [...todos].filter(task=>task.id != id)
+      setTodos(updatedTasks)
+    }
+
+
+
+
+
+    
+    //TASK IS COMPLETED
+      const completeTask = id=>{
+        let updatedTasks= todos.map(todo =>{
+          if(todo.id == id){
+            todo.isComplete=true;
+          }
+          return todo;
+        })
+
+        setTodos(updatedTasks)
+
+      }
+
+
+
+
+
+
+
+
 
     //we will pass the function
   return (
