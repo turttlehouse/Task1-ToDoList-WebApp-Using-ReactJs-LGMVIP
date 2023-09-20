@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import TodoForm from './TodoForm'
+import { Todo } from './Todo';
 
 export default function TodoList() {
 
@@ -32,7 +33,7 @@ export default function TodoList() {
     //REMOVE TODO FROM LIST
 
     const removeTask = id =>{
-      let updatedTasks = [...todos].filter(task=>task.id != id)
+      let updatedTasks = [...todos].filter(task=>task.id !== id)
       setTodos(updatedTasks)
     }
 
@@ -44,7 +45,7 @@ export default function TodoList() {
     //TASK IS COMPLETED
       const completeTask = id=>{
         let updatedTasks= todos.map(todo =>{
-          if(todo.id == id){
+          if(todo.id === id){
             todo.isComplete=true;
           }
           return todo;
@@ -54,19 +55,12 @@ export default function TodoList() {
 
       }
 
-
-
-
-
-
-
-
-
     //we will pass the function
   return (
     <div>
         {/* In this TodoForm we need to pass the addTask method as a props */}
         <TodoForm addTask={addTask} />  
+        <Todo todos={todos} completeTask={completeTask} removeTask={removeTask}> </Todo>
 
     </div>
   )
