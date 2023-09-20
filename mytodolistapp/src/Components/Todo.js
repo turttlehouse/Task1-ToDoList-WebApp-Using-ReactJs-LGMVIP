@@ -21,9 +21,9 @@ export const Todo = (props) => {
         <div className='todo-text'>{todo.text}</div>
          <div className='icons' key={todo.id}>
 
-        <TiTick onClick={() => { props.completeTask(todo.id) } }></TiTick>
+        <TiTick className={todo.isComplete ?'hide':'tick'} onClick={() => { props.completeTask(todo.id) } }></TiTick>
 
-        <RiCloseCircleLine onClick={() => { props.removeTask(todo.id) } }></RiCloseCircleLine>
+        <RiCloseCircleLine className='ri' onClick={() => { props.removeTask(todo.id) } }></RiCloseCircleLine>
 
 
       </div>

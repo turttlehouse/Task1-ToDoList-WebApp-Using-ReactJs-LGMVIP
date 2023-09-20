@@ -1,0 +1,85 @@
+/* Container for the entire Todo list */
+.Todo-list-container {
+    width: 50rem;
+    background-color: #f0f0f0; /* Light gray background for the list container */
+    margin: 2rem auto; /* Center the container and add some margin */
+    padding: 2rem;
+    border-radius: 5px; /* Rounded corners for a cleaner look */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow */
+  }
+  
+  /* Form for adding new tasks */
+  .todo-form {
+    display: flex;
+    font-size: 1.5rem;
+    margin-top: 1rem; /* Add spacing between the form and the list */
+    border-radius: 5;
+  }
+  
+  .todo-form input {
+    flex: 1;
+    font-size: 1.5rem;
+    border: 1px solid #ccc; /* Light gray border */
+    padding: 1rem;
+    border-radius: 5px; /* Rounded corners for input field */
+  }
+  
+  .todo-form button {
+    border: none;
+    background-color: #007BFF; /* Blue button */
+    color: #fff; /* White text color */
+    padding: 1rem 2rem;
+    font-weight: 500; /* Slightly bolder font */
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners for the button */
+  }
+  
+  /* Individual task item */
+  .task-div {
+    background-color: #fff; /* White background for task items */
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem; /* Add spacing between task items */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners for task items */
+  }
+  
+  .todo-text {
+    font-size: 1.5rem;
+    flex: 1;
+  }
+  
+  .icons {
+    font-size: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+  }
+  
+  /* Styling for completed tasks */
+  .complete {
+    text-decoration: line-through;
+    background-color: blue; /* Green background for completed tasks */
+    color: #fff; /* White text color for completed tasks */
+  }
+  
+  /* Styling for hidden elements */
+  .hide {
+    display: none;
+  }
+  
+  h1 {
+    text-align: center;
+    color:black; /* Blue heading color */
+    font-family: 'Arial', sans-serif; /* Use a common sans-serif font */
+    margin-top: 2rem;
+  }
+  
+  .div1 {
+    background-color: lightskyblue;
+    border-top-left-radius: 10px; /* Add a curve to the top-left corner */
+    border-top-right-radius: 10px; /* Add a curve to the top-right corner */
+  }
+  

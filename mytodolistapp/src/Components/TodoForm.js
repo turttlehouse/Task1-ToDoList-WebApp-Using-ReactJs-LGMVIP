@@ -30,7 +30,7 @@ export default function TodoForm(props) {
        }
 
   return (
-    <form>
+    <form className='todo-form'>
         <input type="text" placeholder='Title...' onChange={handleChange} className="todo-input" value={input} name="text"/>
         <button type='submit' onClick={handleSubmit} className='todo-btn'>Add</button>
     </form>
